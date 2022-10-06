@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BarberTime.MainPage" Padding="0,20,0,0">
+             x:Class="BarberTime.MainPage" Padding="0,80,0,0 ">
 
-
-  <Grid RowDefinitions="*, 10*" RowSpacing="20" ColumnSpacing="20">
-        <BoxView Grid.Row="0" Grid.Column="0" Color="#3A4774"/>
-      
-  </Grid>
-
+  
+    <Grid RowDefinitions="*,15*" ColumnDefinitions="*,*">
+            <BoxView Grid.Row="0" Grid.ColumnSpan="2" Color="#3A4774"/>
+        <Label Text="Kort haar" TextColor="White" FontSize="17" BackgroundColor="Grey" />
+    </Grid>
+   
 </ContentPage>
