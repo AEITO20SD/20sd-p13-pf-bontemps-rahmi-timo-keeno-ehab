@@ -54,16 +54,13 @@ namespace BarberTime
                     throw new Exception("Valid numeber is required");
 
                 // TODO: Insert the new person into the database
-                result = conn.Insert(new CreateAccount { Naam = name });
-                conn.Insert(new CreateAccount { Email = email });
-                conn.Insert(new CreateAccount { Wachtwoord = password });
-                conn.Insert(new CreateAccount { TelefoonNummer = number });
+                result = conn.Insert(new CreateAccount { Naam = name, Email = email, Wachtwoord = password, TelefoonNummer = number });
 
-                StatusMessage = string.Format("{0} record(s) added (Name: {1})", result, name);
+                StatusMessage = string.Format("{0} record(s) added (Name: {1})", result, name, email, password, number);
             }
             catch (Exception ex)
             {
-                StatusMessage = string.Format("Failed to add {0}. Error: {1}", name, ex.Message);
+                StatusMessage = string.Format("Failed to add {0}. Error: {1}", name, email, password, number, ex.Message);
             }
 
         }

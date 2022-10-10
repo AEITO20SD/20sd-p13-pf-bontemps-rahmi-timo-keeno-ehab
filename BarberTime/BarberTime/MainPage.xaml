@@ -33,14 +33,14 @@
         <Entry x:Name="number"
            Placeholder="Enter number" Grid.Row="4"/>
 
-        <Button Text="Add Person"
+        <Button Text="Create account"
             Grid.Row="5"
             Clicked="OnNewButtonClicked" />
 
         <Label x:Name="statusMessage"
            Grid.Row="6" />
 
-        <Button Text="Get All People"
+        <Button Text="View details"
             Grid.Row="7"
             Clicked="OnGetButtonClicked" />
 
