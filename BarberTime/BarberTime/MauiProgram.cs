@@ -13,6 +13,10 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		return builder.Build();
+        string dbPath = FileAccessHelper.GetLocalFilePath("BarberTime.db3");
+        builder.Services.AddSingleton<AccountRepository>(s => ActivatorUtilities.CreateInstance<AccountRepository>(s, dbPath));
+
+
+        return builder.Build();
 	}
 }

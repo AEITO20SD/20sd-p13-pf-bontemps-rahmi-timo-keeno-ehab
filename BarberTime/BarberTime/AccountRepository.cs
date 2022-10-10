@@ -8,7 +8,7 @@ using SQLite;
 
 namespace BarberTime
 {
-    public class AccountReposiroty
+    public class AccountRepository
     {
         string _dbPath;
 
@@ -27,24 +27,37 @@ namespace BarberTime
             conn.CreateTable<CreateAccount>();
         }
 
-        public AccountReposiroty(string dbPath)
+        public AccountRepository(string dbPath)
         {
             _dbPath = dbPath;
         }
 
-        public void AddNewPerson(string name)
+        public void AddNewPerson(string name, string email, string password, string number)
         {
             int result = 0;
             try
             {
-                // TODO: Call Init()
+                // verify the database is initialized
+                Init();
 
                 // basic validation to ensure a name was entered
                 if (string.IsNullOrEmpty(name))
                     throw new Exception("Valid name required");
 
+                if (string.IsNullOrEmpty(email))
+                    throw new Exception("Valid email required");
+
+                if (string.IsNullOrEmpty(password))
+                    throw new Exception("Valid password is required");
+
+                if (string.IsNullOrEmpty(number))
+                    throw new Exception("Valid numeber is required");
+
                 // TODO: Insert the new person into the database
-                result = 0;
+                result = conn.Insert(new CreateAccount { Naam = name });
+                conn.Insert(new CreateAccount { Email = email });
+                conn.Insert(new CreateAccount { Wachtwoord = password });
+                conn.Insert(new CreateAccount { TelefoonNummer = number });
 
                 StatusMessage = string.Format("{0} record(s) added (Name: {1})", result, name);
             }
@@ -60,7 +73,8 @@ namespace BarberTime
             // TODO: Init then retrieve a list of Person objects from the database into a list
             try
             {
-
+                Init();
+                return conn.Table<CreateAccount>().ToList();
             }
             catch (Exception ex)
             {

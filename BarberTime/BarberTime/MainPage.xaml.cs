@@ -1,24 +1,29 @@
-﻿namespace BarberTime;
+﻿using BarberTime.Models;
+using System.Collections.Generic;
+
+namespace BarberTime;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+    public MainPage()
+    {
+        InitializeComponent();
+    }
 
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+    public void OnNewButtonClicked(object sender, EventArgs args)
+    {
+        statusMessage.Text = "";
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+        App.AccountRepo.AddNewPerson(name.Text, email.Text, password.Text, number.Text);
+        statusMessage.Text = App.AccountRepo.StatusMessage;
+    }
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+    public void OnGetButtonClicked(object sender, EventArgs args)
+    {
+        statusMessage.Text = "";
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+        List<CreateAccount> people = App.AccountRepo.GetAllPeople();
+        peopleList.ItemsSource = people;
+    }
 }
 

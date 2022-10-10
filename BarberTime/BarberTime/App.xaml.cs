@@ -2,10 +2,15 @@
 
 public partial class App : Application
 {
-	public App()
+    public static AccountRepository AccountRepo { get; private set; }
+
+    public App(AccountRepository repo)
 	{
 		InitializeComponent();
 
 		MainPage = new AppShell();
-	}
+
+        AccountRepo = repo;
+
+    }
 }
