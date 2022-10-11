@@ -4,11 +4,21 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:BarberTime"
-    Shell.FlyoutBehavior="Disabled">
+    xmlns:views="clr-namespace:BarberTime.Views">
 
     <ShellContent
-        Title="Home"
+        Title=""
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
-
+    <TabBar>
+        <Tab Title=""
+            Icon="appicon.svg">
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <ShellContent
+        Title=""
+        Icon="appicon.svg"
+        ContentTemplate="{DataTemplate views:Haircutpage}"
+         />
+    </TabBar>
 </Shell>
