@@ -1,4 +1,5 @@
-﻿namespace BarberTime;
+﻿
+namespace BarberTime;
 
 public partial class App : Application
 {
@@ -8,4 +9,5 @@ public partial class App : Application
 
 		MainPage = new AppShell();
 	}
+
 }

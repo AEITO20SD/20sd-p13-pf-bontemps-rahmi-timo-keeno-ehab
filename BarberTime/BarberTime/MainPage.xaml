@@ -4,9 +4,16 @@
              x:Class="BarberTime.MainPage" Padding="0,80,0,0 ">
 
   
-    <Grid RowDefinitions="*,15*" ColumnDefinitions="*,*">
-            <BoxView Grid.Row="0" Grid.ColumnSpan="2" Color="#3A4774"/>
-        <Label Text="Kort haar" TextColor="White" FontSize="17" BackgroundColor="Grey" />
+    <Grid RowDefinitions="*,15*">
+        <BoxView Grid.Row="0" Grid.ColumnSpan="3" Color="#3A4774"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Button Text="Kort haar" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Button Text="Middellang haar" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
+        <Button Text="Lang haar" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
     </Grid>
    
 </ContentPage>
