@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BarberTime.Viewmodels
 {
-    internal class Haircutpage
+    internal class ProductenViewModels
     {
     }
 }
