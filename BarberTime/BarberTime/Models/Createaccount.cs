@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BarberTime.Viewmodels
+namespace BarberTime.Models
 {
-    internal class Haircutpage
+    internal class Createaccount
     {
-
     }
 }
