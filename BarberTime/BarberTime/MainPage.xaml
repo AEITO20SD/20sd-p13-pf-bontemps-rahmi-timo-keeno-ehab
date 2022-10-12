@@ -3,10 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BarberTime.MainPage" Padding="0,20,0,0">
 
-
-  <Grid RowDefinitions="*, 10*" RowSpacing="20" ColumnSpacing="20">
-        <BoxView Grid.Row="0" Grid.Column="0" Color="#3A4774"/>
-      
-  </Grid>
+   
+    
 
 </ContentPage>
