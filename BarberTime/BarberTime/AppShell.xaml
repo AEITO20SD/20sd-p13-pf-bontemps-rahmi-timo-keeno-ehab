@@ -6,19 +6,27 @@
     xmlns:local="clr-namespace:BarberTime"
     xmlns:views="clr-namespace:BarberTime.Views">
 
+    <TabBar>
         <ShellContent
-        Title=""
+        Title="Home"
+        Icon="home_icon.png"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
-    <TabBar>
-        <Tab Title=""
-            Icon="appicon.svg">
-            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
-        </Tab>
-        <ShellContent
-        Title=""
-        Icon="appicon.svg"
-        ContentTemplate="{DataTemplate views:Haircutpage}"
-         />
+
+        <ShellContent 
+        Title="Styles"
+        Icon="hairstyle_icon.png"
+        ContentTemplate="{DataTemplate views:Haircutpage}" />
+
+        <ShellContent 
+        Title="Agenda"
+        Icon="agenda_icon.png"
+        ContentTemplate="{DataTemplate views:Agendapage}" />
+
+        <ShellContent 
+        Title="Products"
+        Icon="product_icon.png"
+        ContentTemplate="{DataTemplate views:Producten}" />
+
     </TabBar>
 </Shell>

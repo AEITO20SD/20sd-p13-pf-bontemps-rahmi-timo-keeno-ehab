@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BarberTime.Views.Haircutpage"
-             Title="Haircutpage">
+             >
 
-    <Grid RowDefinitions="*,15*">
+    <Grid RowDefinitions="*,10*">
         <BoxView Grid.Row="0" Grid.ColumnSpan="3" Color="#3A4774"/>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
