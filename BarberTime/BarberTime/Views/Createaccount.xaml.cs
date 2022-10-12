@@ -1,7 +1,5 @@
 using BarberTime.Models;
-using Java.Lang;
 using System.Collections.Generic;
-using static Java.Util.Jar.Attributes;
 
 namespace BarberTime;
 
@@ -24,7 +22,7 @@ public partial class CreateAccount : ContentPage
     {
         statusMessage.Text = "";
 
-        List<Createaccount> people = App.AccountRepo.GetAllPeople();
+        List<CreateAccount> people = App.AccountRepo.GetAllPeople();
         peopleList.ItemsSource = people;
     }
 }

@@ -56,7 +56,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\Createaccount.xaml.cs">
+	  <Compile Update="Views\CreateAccount.xaml.cs">
 	    <DependentUpon>CreateAccount.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>

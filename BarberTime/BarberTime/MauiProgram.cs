@@ -1,4 +1,6 @@
-﻿namespace BarberTime;
+﻿using CommunityToolkit.Maui;
+
+namespace BarberTime;
 
 public static class MauiProgram
 {
@@ -11,7 +13,8 @@ public static class MauiProgram
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-			});
+			})
+			.UseMauiCommunityToolkit();
 
         string dbPath = FileAccessHelper.GetLocalFilePath("BarberTime.db3");
         builder.Services.AddSingleton<CreateAccountViewModels>(s => ActivatorUtilities.CreateInstance<CreateAccountViewModels>(s, dbPath));

@@ -9,15 +9,15 @@ using MaxLengthAttribute = System.ComponentModel.DataAnnotations.MaxLengthAttrib
 
 namespace BarberTime.Models
 {
-    [Table("createAccount")]
-    public class Createaccount
+    [Table("CreateAccount")]
+    public class CreateAccount
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
         [MaxLength(250)]
         [Required]
-        public string Naam { get; set; }
+        public string Name { get; set; }
 
         [MaxLength(250)]
         [Required]
@@ -25,9 +25,9 @@ namespace BarberTime.Models
 
         [MaxLength(250)]
         [Required]
-        public string Wachtwoord { get; set; }
+        public string Password { get; set; }
 
-        public string TelefoonNummer { get; set; }
+        public string Phone_number { get; set; }
 
 
     }
