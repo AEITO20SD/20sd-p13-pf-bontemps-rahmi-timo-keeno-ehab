@@ -56,16 +56,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\CreateAccount.xaml.cs">
-	    <DependentUpon>CreateAccount.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="Views\Agendapage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\CreateAccount.xaml">
+	  <MauiXaml Update="Views\CreateAccountPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Haircutpage.xaml">
