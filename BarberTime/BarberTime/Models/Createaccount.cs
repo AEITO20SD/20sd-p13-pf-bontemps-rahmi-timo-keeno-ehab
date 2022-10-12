@@ -10,7 +10,7 @@ using MaxLengthAttribute = System.ComponentModel.DataAnnotations.MaxLengthAttrib
 namespace BarberTime.Models
 {
     [Table("createAccount")]
-    public class CreateAccount
+    public class Createaccount
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }

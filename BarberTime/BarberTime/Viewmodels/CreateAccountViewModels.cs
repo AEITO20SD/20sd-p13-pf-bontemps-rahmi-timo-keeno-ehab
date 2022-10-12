@@ -24,7 +24,7 @@ namespace BarberTime
                 return;
 
             conn = new SQLiteConnection(_dbPath);
-            conn.CreateTable<CreateAccount>();
+            conn.CreateTable<Createaccount>();
         }
 
         public CreateAccountViewModels(string dbPath)
@@ -54,7 +54,7 @@ namespace BarberTime
                     throw new Exception("Valid numeber is required");
 
                 // TODO: Insert the new person into the database
-                result = conn.Insert(new CreateAccount { Naam = name, Email = email, Wachtwoord = password, TelefoonNummer = number });
+                result = conn.Insert(new Createaccount { Naam = name, Email = email, Wachtwoord = password, TelefoonNummer = number });
 
                 StatusMessage = string.Format("{0} record(s) added (Name: {1})", result, name, email, password, number);
             }
@@ -65,20 +65,20 @@ namespace BarberTime
 
         }
 
-        public List<CreateAccount> GetAllPeople()
+        public List<Createaccount> GetAllPeople()
         {
             // TODO: Init then retrieve a list of Person objects from the database into a list
             try
             {
                 Init();
-                return conn.Table<CreateAccount>().ToList();
+                return conn.Table<Createaccount>().ToList();
             }
             catch (Exception ex)
             {
                 StatusMessage = string.Format("Failed to retrieve data. {0}", ex.Message);
             }
 
-            return new List<CreateAccount>();
+            return new List<Createaccount>();
         }
     }
 }

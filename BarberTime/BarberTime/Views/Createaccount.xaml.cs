@@ -24,7 +24,7 @@ public partial class CreateAccount : ContentPage
     {
         statusMessage.Text = "";
 
-        List<CreateAccount> people = App.AccountRepo.GetAllPeople();
+        List<Createaccount> people = App.AccountRepo.GetAllPeople();
         peopleList.ItemsSource = people;
     }
 }
