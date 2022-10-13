@@ -3,14 +3,30 @@
     x:Class="BarberTime.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:BarberTime">
-   
-    <ShellContent
-        
-        Title=""
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" 
-        />
+    xmlns:local="clr-namespace:BarberTime"
+    xmlns:views="clr-namespace:BarberTime.Views">
 
-   
+    <TabBar>
+        <ShellContent
+        Title="Home"
+        Icon="home_icon.png"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+        <ShellContent 
+        Title="Styles"
+        Icon="hairstyle_icon.png"
+        ContentTemplate="{DataTemplate views:Haircutpage}" />
+
+        <ShellContent 
+        Title="Agenda"
+        Icon="agenda_icon.png"
+        ContentTemplate="{DataTemplate views:Agendapage}" />
+
+        <ShellContent 
+        Title="Products"
+        Icon="product_icon.png"
+        ContentTemplate="{DataTemplate views:Producten}" />
+
+    </TabBar>
 </Shell>

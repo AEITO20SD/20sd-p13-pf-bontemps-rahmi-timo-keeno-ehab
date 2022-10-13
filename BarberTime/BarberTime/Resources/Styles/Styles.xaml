@@ -30,7 +30,7 @@
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="CornerRadius" Value="10"/>
         <Setter Property="Padding" Value="10,12"/>
-        <Setter Property="Grid.Padding" Value="8"/>
+        <Setter Property="Grid.Padding" Value="9"/>
         <Setter Property="Grid.RowSpacing" Value="1"/>
         <Setter Property="VisualStateManager.VisualStateGroups">
             <VisualStateGroupList>
