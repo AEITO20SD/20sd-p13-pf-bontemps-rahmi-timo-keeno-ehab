@@ -3,26 +3,57 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BarberTime.MainPage" BackgroundColor="#F6F6F6">
 
-    <Grid>
+    <Grid Padding="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="AUTO"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="AUTO"/>
             <RowDefinition Height="AUTO"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="AUTO"/>
         </Grid.RowDefinitions>
         
         <!--=Cutting made easy=-->
-        <HorizontalStackLayout>
-            <Label HorizontalTextAlignment="Center" Text="Cutting made easy" TextColor="{StaticResource BarberTimeBlue}"/>
-        </HorizontalStackLayout>
+        <Label Text="Cutting made easy" 
+               Padding="4" 
+               FontSize="18"
+               HorizontalTextAlignment="Center" 
+               TextColor="{StaticResource BarberTimeBlue}"/>
         <!--=Haircut with price and immage=-->
         
         <!--Button plan je afspraak-->
+        <Button Text="PLAN JE AFSPRAAK IN"
+                BackgroundColor="{StaticResource BarberTimeBlue}"
+                Padding="16"
+                FontSize="18"
+                CornerRadius="7"
+                Grid.Row="2" />
+        
         <!--Portfolio and Products-->
+        <Label Text="Portfolio" 
+               HorizontalTextAlignment="Start" 
+               TextColor="{StaticResource BarberTimeBlue}"
+               FontSize="25"
+               Grid.Row="3"/>
+        
+        <Label Text="Onze Products" 
+                HorizontalTextAlignment="End" 
+                TextColor="{StaticResource BarberTimeBlue}"
+                FontSize="25"
+                Grid.Row="3"/>
+        
         <!-- photo off hair and products-->
+        <Image Source="haircut2.jpg"
+               Grid.Row="4"
+               />
+        
         <!--Button mijn afspraken-->
+        <Button Text="MIJN AFSPREKEN"
+                BackgroundColor="{StaticResource BarberTimeBlue}"
+                Padding="16"
+                FontSize="18"
+                CornerRadius="7"
+                Grid.Row="5" />
     </Grid>
 
    
