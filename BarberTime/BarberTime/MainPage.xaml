@@ -1,7 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BarberTime.MainPage" Padding="0,20,0,0">
+             x:Class="BarberTime.MainPage" BackgroundColor="#F6F6F6">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="AUTO"/>
+        </Grid.RowDefinitions>
+        
+        <!--=Cutting made easy=-->
+        <HorizontalStackLayout>
+            <Label HorizontalTextAlignment="Center" Text="Cutting made easy" TextColor="{StaticResource BarberTimeBlue}"/>
+        </HorizontalStackLayout>
+        <!--=Haircut with price and immage=-->
+        
+        <!--Button plan je afspraak-->
+        <!--Portfolio and Products-->
+        <!-- photo off hair and products-->
+        <!--Button mijn afspraken-->
+    </Grid>
 
    
     
