@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:BarberTime.Viewmodels"
+             xmlns:models="clr-namespace:BarberTime.Models"
+             x:DataType="viewmodels:StaticMainPageViewModel"
              x:Class="BarberTime.MainPage" BackgroundColor="#F6F6F6">
 
     <Grid Padding="10">
@@ -18,9 +21,32 @@
                Padding="4" 
                FontSize="18"
                HorizontalTextAlignment="Center" 
+               Grid.Row="0"
                TextColor="{StaticResource BarberTimeBlue}"/>
-        <!--=Haircut with price and immage=-->
         
+        <!--=Haircut with price and immage=-->
+        <CollectionView ItemsSource="{Binding StaticMainPage}"
+                        Grid.Row="1">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal"
+                                   ItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+            
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:StaticMainPage">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="2*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
         <!--Button plan je afspraak-->
         <Button Text="PLAN JE AFSPRAAK IN"
                 BackgroundColor="{StaticResource BarberTimeBlue}"
@@ -43,10 +69,9 @@
                 Grid.Row="3"/>
         
         <!-- photo off hair and products-->
-        <Image Source="haircut2.jpg"
-               Grid.Row="4"
-               />
-        
+            <Image Source="haircut2.jpg" 
+                   Grid.Row="4"/>
+     
         <!--Button mijn afspraken-->
         <Button Text="MIJN AFSPREKEN"
                 BackgroundColor="{StaticResource BarberTimeBlue}"

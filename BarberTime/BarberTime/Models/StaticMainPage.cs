@@ -3,6 +3,6 @@
     public record StaticMainPage(
         string Name,
         string Description,
-        Uri Image,
+        ImageSource Image,
         int Price);
 }
