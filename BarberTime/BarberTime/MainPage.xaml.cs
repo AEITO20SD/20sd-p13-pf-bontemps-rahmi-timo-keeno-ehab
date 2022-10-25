@@ -1,4 +1,6 @@
-﻿namespace BarberTime;
+﻿using BarberTime.Views;
+
+namespace BarberTime;
 
 public partial class MainPage : ContentPage
 {
