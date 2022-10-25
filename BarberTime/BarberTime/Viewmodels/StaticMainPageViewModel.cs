@@ -26,7 +26,7 @@ namespace BarberTime.Viewmodels
                     Name: "Knip en style",
                     Description: "Knipbeurt + style met luxe haar producten",
                     Image: "haircut1.JPG",
-                    Price: 25 )};
+                    Price: "€25" )};
         }
     }
 }

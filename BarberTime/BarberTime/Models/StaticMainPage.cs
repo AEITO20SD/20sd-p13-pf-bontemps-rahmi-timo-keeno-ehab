@@ -4,5 +4,5 @@
         string Name,
         string Description,
         ImageSource Image,
-        int Price);
+        string Price);
 }

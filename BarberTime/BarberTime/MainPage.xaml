@@ -6,17 +6,16 @@
              x:DataType="viewmodels:StaticMainPageViewModel"
              x:Class="BarberTime.MainPage" BackgroundColor="#F6F6F6">
 
-    <Grid Padding="10">
+    <Grid Padding="10" RowSpacing="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="AUTO"/>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="AUTO"/>
             <RowDefinition Height="AUTO"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="AUTO"/>
+            <RowDefinition Height="170"/>
             <RowDefinition Height="AUTO"/>
         </Grid.RowDefinitions>
         
-        <!--=Cutting made easy=-->
         <Label Text="Cutting made easy" 
                Padding="4" 
                FontSize="18"
@@ -28,20 +27,59 @@
         <CollectionView ItemsSource="{Binding StaticMainPage}"
                         Grid.Row="1">
             <CollectionView.ItemsLayout>
-                <LinearItemsLayout Orientation="Horizontal"
-                                   ItemSpacing="10"/>
+                <LinearItemsLayout Orientation="Vertical"
+                                 ItemSpacing="10"/>
             </CollectionView.ItemsLayout>
             
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="models:StaticMainPage">
+                    <Border MaximumHeightRequest="200"
+                            BackgroundColor="Black">
+                        
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="225"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
 
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="2*"/>
-                        </Grid.ColumnDefinitions>
-                    </Grid>
+                            <Grid Padding="15">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35"/>
+                                    <RowDefinition Height="60"/>
+                                    <RowDefinition Height="AUTO"/>
+                                    <RowDefinition Height="AUTO"/>
+                                </Grid.RowDefinitions>
 
+                                <Label Text="{Binding Name}"
+                                       TextColor="White"
+                                       FontSize="25"/>
+
+                                <Label Text="{Binding Description}"
+                                       TextColor="White"
+                                       FontSize="13"
+                                       Grid.Row="1"/>
+
+                                <Label Text="{Binding Price}"
+                                       TextColor="White"
+                                       FontSize="27"
+                                       Grid.Row="2"/>
+
+                                <Button Text="Diensten"  
+                                        BackgroundColor="#F6F6F6"
+                                        TextColor="{StaticResource BarberTimeBlue}"
+                                        WidthRequest="110"
+                                        HorizontalOptions="End"
+                                        FontSize="16"
+                                        CornerRadius="0"
+                                          Clicked="OnButtonClicked1"
+                                        Grid.Row="3"/>
+                            </Grid>
+
+                            <Image Source="{Binding Image}"
+                                   Aspect="AspectFill"
+                                   Grid.Column="1"/>
+                        </Grid>
+                    </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
 
@@ -53,6 +91,7 @@
                 Padding="16"
                 FontSize="18"
                 CornerRadius="7"
+                Clicked="OnButtonClicked2"
                 Grid.Row="2" />
         
         <!--Portfolio and Products-->
@@ -69,15 +108,32 @@
                 Grid.Row="3"/>
         
         <!-- photo off hair and products-->
-            <Image Source="haircut2.jpg" 
-                   Grid.Row="4"/>
-     
+        <Grid Grid.Row="4"
+             ColumnSpacing="40">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="170"/>
+            </Grid.ColumnDefinitions>
+            
+            <Image Source="haircut2.jpg"
+                   BackgroundColor="Black"
+                   Opacity="0.8"/>
+
+            <Image Source="productsimage.jpg"
+                   BackgroundColor="Black"
+                   Opacity="0.8"
+                   Grid.Column="1"/>
+
+        </Grid>
+
         <!--Button mijn afspraken-->
         <Button Text="MIJN AFSPREKEN"
                 BackgroundColor="{StaticResource BarberTimeBlue}"
                 Padding="16"
                 FontSize="18"
                 CornerRadius="7"
+                Clicked="OnButtonClicked3"
                 Grid.Row="5" />
     </Grid>
 
