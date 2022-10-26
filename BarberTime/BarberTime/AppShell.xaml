@@ -28,5 +28,9 @@
         Icon="product_icon.png"
         ContentTemplate="{DataTemplate views:Producten}" />
 
+        <ShellContent 
+        Title="Sign up"
+        ContentTemplate="{DataTemplate views:CreateAccountPage}" />
+
     </TabBar>
 </Shell>
