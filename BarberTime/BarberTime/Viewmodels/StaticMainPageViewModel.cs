@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.Input;
 
 namespace BarberTime.Viewmodels
 {
@@ -28,5 +29,18 @@ namespace BarberTime.Viewmodels
                     Image: "haircut1.JPG",
                     Price: "€25" )};
         }
+
+        [RelayCommand]
+        private async void AgendaButtonClick()
+        {
+            await Shell.Current.GoToAsync("Agendapage");
+        }
+
+        [RelayCommand]
+        private async void MijnAfspraakButtonClick()
+        {
+            await Shell.Current.GoToAsync("Agendapage");
+        }
+
     }
 }

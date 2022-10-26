@@ -9,5 +9,9 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 		BindingContext = new StaticMainPageViewModel();
 	}
+	private async void DienstButtonClick(object sender, EventArgs e)
+	{
+        await Shell.Current.GoToAsync("Diensten");
+    }
 }
 

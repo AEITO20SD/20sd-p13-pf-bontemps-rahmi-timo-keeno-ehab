@@ -68,6 +68,9 @@
 	  <MauiXaml Update="Views\Createaccount.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Diensten.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Haircutpage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

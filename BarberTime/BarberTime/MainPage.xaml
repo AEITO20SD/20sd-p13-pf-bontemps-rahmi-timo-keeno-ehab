@@ -71,7 +71,7 @@
                                         HorizontalOptions="End"
                                         FontSize="16"
                                         CornerRadius="0"
-                                          Clicked="OnButtonClicked1"
+                                        Clicked="DienstButtonClick"
                                         Grid.Row="3"/>
                             </Grid>
 
@@ -91,7 +91,7 @@
                 Padding="16"
                 FontSize="18"
                 CornerRadius="7"
-                Clicked="OnButtonClicked2"
+                Command="{Binding AgendaButtonClickCommand}"
                 Grid.Row="2" />
         
         <!--Portfolio and Products-->
@@ -133,7 +133,7 @@
                 Padding="16"
                 FontSize="18"
                 CornerRadius="7"
-                Clicked="OnButtonClicked3"
+                Command="{Binding MijnAfspraakButtonClickCommand}"
                 Grid.Row="5" />
     </Grid>
 
