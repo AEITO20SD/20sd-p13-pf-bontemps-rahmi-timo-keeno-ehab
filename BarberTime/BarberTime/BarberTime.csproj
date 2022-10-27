@@ -49,6 +49,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\haircut1.JPG" />
+	  <None Remove="Resources\Images\haircut2.jpg" />
+	  <None Remove="Resources\Images\productsimage.jpg" />
 	  <None Remove="Resources\Images\allover_curls.png" />
 	  <None Remove="Resources\Images\assymetrical_bang.png" />
 	  <None Remove="Resources\Images\brow_flow.png" />
@@ -73,6 +76,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\CreateAccountPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Diensten.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Haircutpage.xaml">
