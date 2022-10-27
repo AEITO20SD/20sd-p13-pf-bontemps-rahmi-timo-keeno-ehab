@@ -8,5 +8,6 @@ namespace BarberTime.Viewmodels
 {
     internal class ProductenViewModels
     {
+
     }
 }

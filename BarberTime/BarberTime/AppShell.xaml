@@ -13,17 +13,17 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
-    <ShellContent 
+        <ShellContent 
         Title="Styles"
         Icon="hairstyle_icon.png"
         ContentTemplate="{DataTemplate views:Haircutpage}" />
 
-    <ShellContent 
+        <ShellContent 
         Title="Agenda"
         Icon="agenda_icon.png"
         ContentTemplate="{DataTemplate views:Agendapage}" />
 
-    <ShellContent 
+        <ShellContent 
         Title="Products"
         Icon="product_icon.png"
         ContentTemplate="{DataTemplate views:Producten}" />

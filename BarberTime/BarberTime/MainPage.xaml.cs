@@ -1,4 +1,6 @@
 ﻿using BarberTime.Viewmodels;
+﻿using BarberTime.Views;
+
 
 namespace BarberTime;
 

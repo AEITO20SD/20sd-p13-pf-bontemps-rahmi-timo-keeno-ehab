@@ -11,20 +11,15 @@ using System.ComponentModel.DataAnnotations;
 namespace BarberTime.Models
 {
     [Table("Populaire_kapsels")]
-    public class Haircut
+    public class KapselLike
     {
-        [PrimaryKey , AutoIncrement]
+        [PrimaryKey, AutoIncrement] 
         public int Id { get; set; }
 
-        [MaxLength(250)]
         [Required]
-        public string Naam { get; set; }
+        public int CreateAccountId { get; set; }
 
         [Required]
-        public int TypeId { get; set; }
-
-        [Required]
-        public string Afbeelding { get; set; }
-
+        public int KapselsId { get; set; }
     }
 }

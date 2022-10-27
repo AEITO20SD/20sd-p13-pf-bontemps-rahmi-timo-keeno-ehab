@@ -11,9 +11,9 @@ using System.ComponentModel.DataAnnotations;
 namespace BarberTime.Models
 {
     [Table("Populaire_kapsels")]
-    public class Haircut
+    public class PopulairHaircut
     {
-        [PrimaryKey , AutoIncrement]
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
 
         [MaxLength(250)]
@@ -24,7 +24,7 @@ namespace BarberTime.Models
         public int TypeId { get; set; }
 
         [Required]
-        public string Afbeelding { get; set; }
+        public Uri Afbeelding { get; set; }
 
     }
 }
