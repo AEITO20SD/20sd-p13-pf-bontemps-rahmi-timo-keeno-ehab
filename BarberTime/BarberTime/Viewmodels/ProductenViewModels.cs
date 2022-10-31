@@ -8,10 +8,16 @@ using System.Threading.Tasks;
 
 namespace BarberTime.Viewmodels
 {
-    //public partial class ProductenViewModels : ObservableObject
-    //{
-    //    [ObservableProperty]
-    //    List<Product> product;
-
-    //}
+    public class ProductenViewModels : ContentPage
+    {
+        public ProductenViewModels()
+        {
+            Content = new StackLayout
+            {
+                Children = {
+                    new Label { Text = "Welcome to Xamarin.Forms!" }
+                }
+            };
+        }
+    }
 }
