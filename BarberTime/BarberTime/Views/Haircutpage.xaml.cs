@@ -1,9 +1,13 @@
-namespace BarberTime.Views;
+using BarberTime.Viewmodels;
 
-public partial class Haircutpage : ContentPage
+namespace BarberTime.Views
 {
-	public Haircutpage()
+	public partial class Haircutpage : ContentPage
 	{
-		InitializeComponent();
+		public Haircutpage()
+		{
+			InitializeComponent();
+			BindingContext = new HaircutViewModels();
+		}
 	}
 }
