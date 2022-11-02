@@ -61,6 +61,7 @@
 	  <None Remove="Resources\Images\medium_curls.png" />
 	  <None Remove="Resources\Images\modern_mullet.png" />
 	  <None Remove="Resources\Images\spickey_texture.png" />
+	  <None Remove="Resources\Images\taftpot.png" />
 	  <None Remove="Resources\Images\undercut_fade.png" />
 	</ItemGroup>
 
