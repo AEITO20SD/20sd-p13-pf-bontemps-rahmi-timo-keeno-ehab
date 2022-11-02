@@ -51,7 +51,7 @@
 
         <Label
             Text="Haarkleurmiddel"
-            Grid.,Row="2"
+            Grid.Row="2"
             Grid.Column="1"
             />
     </Grid>
