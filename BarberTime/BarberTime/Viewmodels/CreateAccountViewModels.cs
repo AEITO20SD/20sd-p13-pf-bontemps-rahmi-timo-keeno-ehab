@@ -65,20 +65,20 @@ namespace BarberTime
 
         }
 
-        public List<CreateAccount> GetAllPeople()
-        {
-            // TODO: Init then retrieve a list of Person objects from the database into a list
-            try
-            {
-                Init();
-                return conn.Table<CreateAccount>().ToList();
-            }
-            catch (Exception ex)
-            {
-                StatusMessage = string.Format("Failed to retrieve data. {0}", ex.Message);
-            }
+        //public List<CreateAccount> GetAllPeople()
+        //{
+        //    // TODO: Init then retrieve a list of Person objects from the database into a list
+        //    try
+        //    {
+        //        Init();
+        //        return conn.Table<CreateAccount>().ToList();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        StatusMessage = string.Format("Failed to retrieve data. {0}", ex.Message);
+        //    }
 
-            return new List<CreateAccount>();
-        }
+        //    return new List<CreateAccount>();
+        //}
     }
 }

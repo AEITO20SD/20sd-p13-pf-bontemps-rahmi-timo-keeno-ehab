@@ -1,20 +1,78 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BarberTime.Views.Haircutpage"
-             >
+             x:Class= "BarberTime.Views.Haircutpage"
+             xmlns:viewmodels="clr-namespace:BarberTime.Viewmodels"
+             xmlns:models="clr-namespace:BarberTime.Models"
+             x:DataType="viewmodels:HaircutViewModels"
+             Title="">
+    <Grid>
+        <Grid Padding="0">
 
-    <Grid RowDefinitions="*,10*">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
 
-        <BoxView Grid.Row="0" Grid.ColumnSpan="3" Color="#3A4774"/>
-        <Button Text="Kort haar" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center"/>
-        <Button Text="Middellang haar" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center"/>
-        <Button Text="Lang haar" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="home_icon_png" Grid.Column="1" Grid.Row="0"/>
+            <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="60" Color="#3A4774"/>
+            <Button Text="Kort haar"
+                Grid.Row="1"
+                Grid.Column="0"
+                HorizontalOptions="Center"
+                    Margin="5"
+                />
+            <Button Text="Middellang haar"
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                    Margin="5"
+                />
+            <Button Text="Lang haar"
+                Grid.Row="1"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                    Margin="5"
+                />
+
+            <!-- Populaire kapsels -->
+            <Label Text="Populaire kapsels" FontSize="18" Grid.Row="3" Grid.Column="1" />
+        </Grid>
+        <!-- Aangemaakte kapsels -->
+    <ScrollView>
+        <Grid Margin="10">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <CollectionView ItemsSource="{Binding Populairhaircuts}"
+                            Grid.Column="1" Grid.Row="1"
+                            ItemsLayout="VerticalGrid, 2">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:PopulairHaircut">
+
+                                <Image Source="{Binding Afbeelding}" Grid.Column="0" Grid.Row="1" />
+                                <!--<Button Text="{Binding Naam}" Grid.Column="0" Grid.Row="3" BackgroundColor="{StaticResource Kapsel}"/>-->
+
+                        </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Grid>
+    </ScrollView>
     </Grid>
-
 </ContentPage>

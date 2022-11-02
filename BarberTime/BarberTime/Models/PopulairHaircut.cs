@@ -24,7 +24,7 @@ namespace BarberTime.Models
         public int TypeId { get; set; }
 
         [Required]
-        public Uri Afbeelding { get; set; }
+        public ImageSource Afbeelding { get; set; }
 
     }
 }
