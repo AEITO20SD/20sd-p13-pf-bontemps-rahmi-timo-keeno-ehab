@@ -33,13 +33,13 @@ namespace BarberTime.Viewmodels
         [RelayCommand]
         private async void AgendaButtonClick()
         {
-            await Shell.Current.GoToAsync("Agendapage");
+            await Shell.Current.GoToAsync("//Agendapage");
         }
 
         [RelayCommand]
         private async void MijnAfspraakButtonClick()
         {
-            await Shell.Current.GoToAsync("Agendapage");
+            await Shell.Current.GoToAsync("//Agendapage");
         }
 
     }

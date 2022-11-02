@@ -23,13 +23,13 @@
         Title="Agenda"
         Icon="agenda_icon.png"
         ContentTemplate="{DataTemplate views:Agendapage}" 
-        Route="Agenda"/>
+        Route="Agendapage"/>
 
         <ShellContent 
         Title="Products"
         Icon="product_icon.png"
         ContentTemplate="{DataTemplate views:Producten}" 
-        Route="Products"/>
+        Route="Producten"/>
 
         <ShellContent 
         Title="Sign up"
