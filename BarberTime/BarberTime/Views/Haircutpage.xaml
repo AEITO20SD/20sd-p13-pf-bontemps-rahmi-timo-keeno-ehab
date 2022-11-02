@@ -6,15 +6,13 @@
              xmlns:models="clr-namespace:BarberTime.Models"
              x:DataType="viewmodels:HaircutViewModels"
              Title="">
-    <ScrollView>
-        <Grid Padding="5">
+    <Grid>
+        <Grid Padding="0">
            
             <Grid.RowDefinitions>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -23,54 +21,58 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             
-            <Image Source="home_icon_png" Grid.Row="1"/>
-
+            <Image Source="home_icon_png" Grid.Column="1" Grid.Row="0"/>
+            <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="60" Color="#3A4774"/>
             <Button Text="Kort haar" 
                 Grid.Row="1" 
                 Grid.Column="0"
                 HorizontalOptions="Center"
+                    Margin="5"
                 />
             <Button Text="Middellang haar" 
                 Grid.Row="1" 
                 Grid.Column="1"
                 HorizontalOptions="Center"
+                    Margin="5"
                 />
             <Button Text="Lang haar" 
                 Grid.Row="1" 
                 Grid.Column="2"
                 HorizontalOptions="Center"
+                    Margin="5"    
                 />
            
             <!-- Populaire kapsels -->
-            <Label Text="Populaire kapsels" FontSize="18" Grid.Row="2" Padding="20" HorizontalOptions="Center" />
+            <Label Text="Populaire kapsels" FontSize="18" Grid.Row="3" Grid.Column="1" />
+        </Grid>
+        <!-- Aangemaakte kapsels -->
+    <ScrollView>
+        <Grid Margin="10">
 
-            <!-- Aangemaakte kapsels -->
-
-            <CollectionView ItemsSource="{Binding Populairhaircuts}" Grid.Row="4" 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            
+            <CollectionView ItemsSource="{Binding Populairhaircuts}" 
+                            Grid.Column="1" Grid.Row="1" 
                             ItemsLayout="VerticalGrid, 2">
          
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:PopulairHaircut">
-                        <Grid ColumnSpacing="0" RowSpacing="0">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
-                                </Grid.RowDefinitions>
-                                <Image Source="{Binding Afbeelding}" Grid.Column="2" Grid.Row="1"/>
-                                <Button Text="{Binding Naam}" Grid.Column="2" Grid.Row="2"/>
 
-                            </Grid>
+                                <Image Source="{Binding Afbeelding}" Grid.Column="0" Grid.Row="1" />
+                                <!--<Button Text="{Binding Naam}" Grid.Column="0" Grid.Row="3" BackgroundColor="{StaticResource Kapsel}"/>-->
 
-                        </Grid>
-                    </DataTemplate>
+                        </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-
-            
-           
         </Grid>
     </ScrollView>
+    </Grid>
 </ContentPage>
