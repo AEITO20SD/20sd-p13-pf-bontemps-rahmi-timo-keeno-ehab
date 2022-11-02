@@ -4,7 +4,8 @@
              x:Class="BarberTime.Views.CreateAccountPage"
                BackgroundColor="#F6F6F6">
 
-    <Grid Padding="40" RowSpacing="6" ColumnSpacing="1">
+    <VerticalStackLayout VerticalOptions="Center">
+        <Grid Padding="40" RowSpacing="6" ColumnSpacing="1">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="AUTO"/>
@@ -15,6 +16,7 @@
             <RowDefinition Height="AUTO"/>
             <RowDefinition Height="AUTO"/>
             <RowDefinition Height="AUTO" />
+            <!--<RowDefinition Height="AUTO" />-->
         </Grid.RowDefinitions>
 
         <Entry x:Name="name"
@@ -43,11 +45,19 @@
         <Label x:Name="statusMessage"
                  Grid.Row="5"/>
 
-        <Button Text="View details"
+        <!--<Button Text="View details"
                 Grid.Row="6"
-                Clicked="OnGetButtonClicked"/>
+                Clicked="OnGetButtonClicked"/>-->
 
-        <CollectionView x:Name="peopleList" Grid.Row="7">
+        <Label Text="Heb je al een account? LOG IN"
+                  TextColor="DimGrey"
+                  Grid.Row="6">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureForSignIn"/>
+            </Label.GestureRecognizers>
+        </Label>
+
+        <!--<CollectionView x:Name="peopleList" Grid.Row="8">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid RowSpacing="1" ColumnSpacing="1">
@@ -67,8 +77,9 @@
                     </Grid>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-        </CollectionView>
+        </CollectionView>-->
 
     </Grid>
+   </VerticalStackLayout>
 
 </ContentPage>

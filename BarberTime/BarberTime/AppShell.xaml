@@ -16,21 +16,30 @@
         <ShellContent 
         Title="Styles"
         Icon="hairstyle_icon.png"
-        ContentTemplate="{DataTemplate views:Haircutpage}" />
+        ContentTemplate="{DataTemplate views:Haircutpage}" 
+        Route="Haircutpage"/>
 
         <ShellContent 
         Title="Agenda"
         Icon="agenda_icon.png"
-        ContentTemplate="{DataTemplate views:Agendapage}" />
+        ContentTemplate="{DataTemplate views:Agendapage}" 
+        Route="Agenda"/>
 
         <ShellContent 
         Title="Products"
         Icon="product_icon.png"
-        ContentTemplate="{DataTemplate views:Producten}" />
+        ContentTemplate="{DataTemplate views:Producten}" 
+        Route="Products"/>
 
         <ShellContent 
         Title="Sign up"
-        ContentTemplate="{DataTemplate views:CreateAccountPage}" />
+        ContentTemplate="{DataTemplate views:CreateAccountPage}" 
+        Route="CreateAccountPage"/>
+
+        <ShellContent 
+        Title="Sign in"
+        ContentTemplate="{DataTemplate views:SignInPage}" 
+        Route="SignInPage"/>
 
     </TabBar>
 </Shell>
