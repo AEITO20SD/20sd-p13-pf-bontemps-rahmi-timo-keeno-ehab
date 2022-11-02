@@ -1,19 +1,19 @@
+﻿using BarberTime.Viewmodels;
 ﻿using BarberTime.Views;
+
 
 namespace BarberTime;
 
 public partial class MainPage : ContentPage
 {
-	//int count = 0;
-
 	public MainPage()
 	{
 		InitializeComponent();
+		BindingContext = new StaticMainPageViewModel();
 	}
-
-	private void OnCounterClicked(object sender, EventArgs e)
+	private async void DienstButtonClick(object sender, EventArgs e)
 	{
-		
-	}
+        await Shell.Current.GoToAsync("Diensten");
+    }
 }
 

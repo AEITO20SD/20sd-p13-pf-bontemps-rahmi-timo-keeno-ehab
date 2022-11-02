@@ -49,44 +49,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\allover_curls.png" />
-	  <None Remove="Resources\Images\assymetrical_bang.png" />
-	  <None Remove="Resources\Images\brow_flow.png" />
-	  <None Remove="Resources\Images\buzz_cut.png" />
-	  <None Remove="Resources\Images\french_crop.png" />
-	  <None Remove="Resources\Images\man_bun.png" />
-	  <None Remove="Resources\Images\medium_curls.png" />
-	  <None Remove="Resources\Images\modern_mullet.png" />
-	  <None Remove="Resources\Images\spickey_texture.png" />
-	  <None Remove="Resources\Images\undercut_fade.png" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <PackageReference Include="CommunityToolkit.Maui" Version="1.3.0" />
-	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
 	  <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.2" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="Views\Agendapage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\CreateAccountPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\Diensten.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\Haircutpage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\Producten.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\SignInPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

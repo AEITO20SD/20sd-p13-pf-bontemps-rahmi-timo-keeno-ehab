@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:BarberTime.Viewmodels"
+             xmlns:models="clr-namespace:BarberTime.Models"
+             x:DataType="viewmodels:ProductenViewModels"
              x:Class="BarberTime.Views.Producten"
              Title="Producten">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <Grid Grid.Row="4"
+             ColumnSpacing="40">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="160"/>
+                <ColumnDefinition Width="170"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="haircut2.jpg"
+                   BackgroundColor="Black"
+                   Opacity="0.8"/>
+
+            <Image Source="productsimage.jpg"
+                   BackgroundColor="Black"
+                   Opacity="0.8"
+                   Grid.Column="1"/>
+
+        </Grid>
+    </Grid>
+    
 </ContentPage>

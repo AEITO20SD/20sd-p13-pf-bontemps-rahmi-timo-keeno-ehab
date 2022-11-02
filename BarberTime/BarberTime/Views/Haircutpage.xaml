@@ -8,7 +8,7 @@
              Title="">
     <Grid>
         <Grid Padding="0">
-           
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="60"/>
@@ -20,28 +20,28 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
+
             <Image Source="home_icon_png" Grid.Column="1" Grid.Row="0"/>
             <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="60" Color="#3A4774"/>
-            <Button Text="Kort haar" 
-                Grid.Row="1" 
+            <Button Text="Kort haar"
+                Grid.Row="1"
                 Grid.Column="0"
                 HorizontalOptions="Center"
                     Margin="5"
                 />
-            <Button Text="Middellang haar" 
-                Grid.Row="1" 
+            <Button Text="Middellang haar"
+                Grid.Row="1"
                 Grid.Column="1"
                 HorizontalOptions="Center"
                     Margin="5"
                 />
-            <Button Text="Lang haar" 
-                Grid.Row="1" 
+            <Button Text="Lang haar"
+                Grid.Row="1"
                 Grid.Column="2"
                 HorizontalOptions="Center"
-                    Margin="5"    
+                    Margin="5"
                 />
-           
+
             <!-- Populaire kapsels -->
             <Label Text="Populaire kapsels" FontSize="18" Grid.Row="3" Grid.Column="1" />
         </Grid>
@@ -56,12 +56,12 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            
-            
-            <CollectionView ItemsSource="{Binding Populairhaircuts}" 
-                            Grid.Column="1" Grid.Row="1" 
+
+
+            <CollectionView ItemsSource="{Binding Populairhaircuts}"
+                            Grid.Column="1" Grid.Row="1"
                             ItemsLayout="VerticalGrid, 2">
-         
+
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:PopulairHaircut">
 
