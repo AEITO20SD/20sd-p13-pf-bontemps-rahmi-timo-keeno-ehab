@@ -27,25 +27,25 @@ namespace BarberTime.Viewmodels
             {
                 new PopulairHaircut()
                 {
-                    Naam =  ("Classic Pompadour"),
+                    Naam =  "Classic Pompadour",
                     Afbeelding = "man_bun.png"
                 },
 
                 new PopulairHaircut()
                 {
-                    Naam =  ("Medium Curls "),
+                    Naam =  "Medium Curls ",
                     Afbeelding = "medium_curls.png"
                 },
 
                  new PopulairHaircut()
                 {
-                    Naam =  ("Assymetrical Bang"),
+                    Naam =  "Assymetrical Bang",
                     Afbeelding = "undercut_fade.png"
                 },
 
                 new PopulairHaircut()
                 {
-                    Naam =  ("Spickey Texture "),
+                    Naam =  "Spickey Texture ",
                     Afbeelding ="modern_mullet.png"
                 },
 
