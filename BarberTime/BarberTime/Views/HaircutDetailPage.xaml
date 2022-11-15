@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class= "BarberTime.Views.Haircutpage"
+             x:Class= "BarberTime.Views.HaircutDetailPage"
              xmlns:viewmodels="clr-namespace:BarberTime.Viewmodels"
              xmlns:models="clr-namespace:BarberTime.Models"
              x:DataType="viewmodels:HaircutViewModels"
@@ -22,24 +22,7 @@
             </Grid.ColumnDefinitions>
             <Image Source="logo_barbertime.png" Grid.Column="1" Grid.Row="0"/>
             <BoxView Grid.Row="1" Grid.ColumnSpan="3" HeightRequest="60" Color="#3A4774"/>
-            <Button Text="Kort haar"
-                Grid.Row="1"
-                Grid.Column="0"
-                HorizontalOptions="Center"
-                    Margin="5"
-                />
-            <Button Text="Middellang haar"
-                Grid.Row="1"
-                Grid.Column="1"
-                HorizontalOptions="Center"
-                    Margin="5"
-                />
-            <Button Text="Lang haar"
-                Grid.Row="1"
-                Grid.Column="2"
-                HorizontalOptions="Center"
-                    Margin="5"
-                />
+           
 
             <!-- Populaire kapsels -->
             <Label Text="Populaire kapsels" FontSize="16" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center"/>
@@ -49,28 +32,26 @@
         <Grid Margin="10" RowSpacing="1">
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
                 </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
 
-            <CollectionView ItemsSource="{Binding Populairhaircuts}"
+                <CollectionView ItemsSource="{Binding Populairhaircuts}"
                             Grid.Column="1" Grid.Row="1"
-                            ItemsLayout="VerticalGrid, 2">
-
+                            ItemsLayout="VerticalGrid, 2"/>
                 <CollectionView.ItemTemplate>
                     <DataTemplate x:DataType="models:PopulairHaircut">
-                            <Grid Margin="5">
-                                <Image Source="{Binding Afbeelding}" Grid.Row="0" Grid.RowSpan="1"/>
-                                <Button Text="{Binding Naam}" Grid.Row="1"/>
-                            </Grid>
-                        </DataTemplate>
+                        <Grid Margin="2">
+                            <Image Source="{Binding Afbeelding}" Grid.Row="0" Grid.RowSpan="1"/>
+                            <Button Text="{Binding Afbeelding}" Grid.Row="0" Grid.RowSpan="1"/>
+                        </Grid>
+                    </DataTemplate>
                 </CollectionView.ItemTemplate>
-            </CollectionView>
-               
+
 
             </Grid>
            

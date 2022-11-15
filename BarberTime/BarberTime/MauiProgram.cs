@@ -1,4 +1,6 @@
-﻿using CommunityToolkit.Maui;
+﻿using BarberTime.Viewmodels;
+using BarberTime.Views;
+using CommunityToolkit.Maui;
 
 namespace BarberTime;
 
@@ -18,6 +20,12 @@ public static class MauiProgram
 
         string dbPath = FileAccessHelper.GetLocalFilePath("BarberTime.db3");
         builder.Services.AddSingleton<CreateAccountViewModels>(s => ActivatorUtilities.CreateInstance<CreateAccountViewModels>(s, dbPath));
+
+
+	//Door Transient te gebruiken wordt er telkens een nieuwe pagina aangemaakt
+		builder.Services.AddTransient<HaircutDetailPage>();
+        builder.Services.AddTransient<HaircutDetailViewModel>();
+
 
         return builder.Build();
 	}

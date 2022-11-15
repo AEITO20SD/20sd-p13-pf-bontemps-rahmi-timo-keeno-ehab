@@ -7,12 +7,10 @@
              x:DataType="viewmodels:HaircutViewModels"
              Title="">
     <Grid>
-        <Grid>
-
             <Grid.RowDefinitions>
                 <RowDefinition Height="70"/>
                 <RowDefinition Height="60"/>
-                <RowDefinition Height="200"/>
+                <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -42,38 +40,41 @@
                 />
 
             <!-- Populaire kapsels -->
-            <Label Text="Populaire kapsels" FontSize="16" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center"/>
+            <Label Text="Populaire kapsels" FontSize="16" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center"/>
+            <ScrollView Grid.Row="2" Grid.ColumnSpan="3">
+                <Grid Margin="10" RowSpacing="1">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="200"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <CollectionView ItemsSource="{Binding Populairhaircuts}"
+                            Grid.Column="1" Grid.Row="1"
+                            ItemsLayout="VerticalGrid, 2"
+                                     SelectedItem="{Binding itemCommand}">
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate x:DataType="models:PopulairHaircut">
+                                <VerticalStackLayout Grid.Row="0">
+                                    <Image Source="{Binding Afbeelding}" Margin="2" WidthRequest="145"/>
+
+                                <Button Text="{Binding Naam}" HeightRequest="40" WidthRequest="145" Margin="3" BackgroundColor="#3A4774"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodels:HaircutViewModels}}, Path=TapCommand}"/>
+
+                                </VerticalStackLayout>
+
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+            </ScrollView>
+
         </Grid>
         <!-- Aangemaakte kapsels -->
-    <ScrollView>
-        <Grid Margin="10" RowSpacing="1">
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
-                <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-
-            <CollectionView ItemsSource="{Binding Populairhaircuts}"
-                            Grid.Column="1" Grid.Row="1"
-                            ItemsLayout="VerticalGrid, 2">
-
-                <CollectionView.ItemTemplate>
-                    <DataTemplate x:DataType="models:PopulairHaircut">
-                            <Grid Margin="5">
-                                <Image Source="{Binding Afbeelding}" Grid.Row="0" Grid.RowSpan="1"/>
-                                <Button Text="{Binding Naam}" Grid.Row="1"/>
-                            </Grid>
-                        </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-               
-
-            </Grid>
-           
-        </ScrollView>
-    </Grid>
 </ContentPage>

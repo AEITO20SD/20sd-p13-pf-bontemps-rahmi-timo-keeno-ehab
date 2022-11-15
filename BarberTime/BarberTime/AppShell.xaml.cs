@@ -9,5 +9,6 @@ public partial class AppShell : Shell
 		InitializeComponent();
         Routing.RegisterRoute("Agendapage", typeof(Agendapage));
         Routing.RegisterRoute("Diensten", typeof(Diensten));
+        Routing.RegisterRoute(nameof(HaircutDetailPage), typeof(HaircutDetailPage));
     }
 }

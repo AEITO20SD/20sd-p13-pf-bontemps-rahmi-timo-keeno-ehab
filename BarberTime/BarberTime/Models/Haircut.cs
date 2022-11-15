@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using SQLite;
 using MaxLengthAttribute = System.ComponentModel.DataAnnotations.MaxLengthAttribute;
 using System.ComponentModel.DataAnnotations;
+using System.Windows.Input;
 
 namespace BarberTime.Models
 {
