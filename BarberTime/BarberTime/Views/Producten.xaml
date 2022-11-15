@@ -5,55 +5,8 @@
              xmlns:models="clr-namespace:BarberTime.Models"
              x:DataType="viewmodels:ProductenViewModels"
              x:Class="BarberTime.Views.Producten"
-             Title="Producten">
-    <!--<VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>-->
-    <!--<Label
-            Text="Test"
-            TextColor="Black"/>-->
-    
-    <Grid Padding="10" RowSpacing="20">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="AUTO"/>
-            <RowDefinition Height="AUTO"/>
-            <RowDefinition Height="AUTO"/>
- 
-        </Grid.RowDefinitions>       
-
-        <Grid Grid.Row="1"
-             ColumnSpacing="40">
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="160"/>
-                <ColumnDefinition Width="170"/>
-            </Grid.ColumnDefinitions>
-
-            <Image Source="taftpot.jpg"
-                   BackgroundColor="Black"
-                   Opacity="0.8"/>
-            
-            
-
-            <Image Source="productsimage.jpg"
-                   BackgroundColor="Black"
-                   Opacity="0.8"
-                   Grid.Column="1"/>
-
-        </Grid>
-        <Label
-               Text="Taft Wax"
-                Grid.Row="2"
-                />
-
-        <Label
-            Text="Haarkleurmiddel"
-            Grid.Row="2"
-            Grid.Column="1"
-            />
-    </Grid>
-
+             Title="">
+    <StackLayout>
+        <WebView x:Name="webView" HeightRequest="750"/>
+    </StackLayout>
 </ContentPage>
