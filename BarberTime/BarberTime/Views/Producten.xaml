@@ -5,26 +5,8 @@
              xmlns:models="clr-namespace:BarberTime.Models"
              x:DataType="viewmodels:ProductenViewModels"
              x:Class="BarberTime.Views.Producten"
-             Title="Producten">
-    <Grid>
-        <Grid Grid.Row="4"
-             ColumnSpacing="40">
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="160"/>
-                <ColumnDefinition Width="170"/>
-            </Grid.ColumnDefinitions>
-
-            <Image Source="haircut2.jpg"
-                   BackgroundColor="Black"
-                   Opacity="0.8"/>
-
-            <Image Source="productsimage.jpg"
-                   BackgroundColor="Black"
-                   Opacity="0.8"
-                   Grid.Column="1"/>
-
-        </Grid>
-    </Grid>
-    
+             Title="">
+    <StackLayout>
+        <WebView x:Name="webView" HeightRequest="750"/>
+    </StackLayout>
 </ContentPage>
