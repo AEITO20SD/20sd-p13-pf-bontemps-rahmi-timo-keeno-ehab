@@ -1,7 +1,7 @@
-namespace BarberTime.Views;
 using BarberTime.Models;
 using System.Collections.Generic;
 
+namespace BarberTime.Views;
 public partial class CreateAccountPage : ContentPage
 {
 	public CreateAccountPage()
