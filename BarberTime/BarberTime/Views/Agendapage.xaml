@@ -115,36 +115,47 @@
                      GroupName="colors"
                       />
                 <RadioButton Grid.Column="0" Grid.Row="1" Content="9:00"
+                             IsEnabled="false"     
                      GroupName="colors"
                       />
                 <RadioButton Grid.Column="0" Grid.Row="2" Content="10:00"
+                             IsEnabled="false"
                      GroupName="colors"
                       />
                 <RadioButton Content="11:00" Grid.Column="1" Grid.Row="0"
+                             IsEnabled="True"
                      GroupName="colors"
                       />
                 <RadioButton Content="12:00" Grid.Column="1" Grid.Row="1"
+                             IsEnabled="True"
                      GroupName="colors"
                       />
                 <RadioButton Content="13:00" Grid.Column="1" Grid.Row="2"
+                             IsEnabled="false"
                      GroupName="colors"
                       />
                 <RadioButton Content="14:00" Grid.Column="2" Grid.Row="0"
+                             IsEnabled="True"
                      GroupName="colors"
                       />
                 <RadioButton Content="15:00" Grid.Column="2" Grid.Row="1"
+                             IsEnabled="false"
                      GroupName="colors"
                       />
                 <RadioButton Content="16:00" Grid.Column="2" Grid.Row="2"
+                             IsEnabled="True"
                      GroupName="colors"
                       />
                 <RadioButton Content="17:00" Grid.Column="3" Grid.Row="0"
+                             IsEnabled="True"
                      GroupName="colors"
                       />
                 <RadioButton Content="18:00" Grid.Column="3" Grid.Row="1"
+                             IsEnabled="True"
                      GroupName="colors"
                       />
                 <RadioButton Content="19:00" Grid.Column="3" Grid.Row="2"
+                             IsEnabled="True"
                      GroupName="colors"
                       />
          
