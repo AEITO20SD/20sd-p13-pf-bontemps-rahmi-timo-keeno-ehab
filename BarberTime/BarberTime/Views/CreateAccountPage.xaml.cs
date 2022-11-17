@@ -16,11 +16,16 @@ public partial class CreateAccountPage : ContentPage
         statusMessage.Text = App.AccountRepo.StatusMessage;
     }
 
-    public void OnGetButtonClicked(object sender, EventArgs args)
-    {
-        statusMessage.Text = "";
+    //public void OnGetButtonClicked(object sender, EventArgs args)
+    //{
+    //    statusMessage.Text = "";
 
-        List<CreateAccount> people = App.AccountRepo.GetAllPeople();
-        peopleList.ItemsSource = people;
+    //    List<CreateAccount> people = App.AccountRepo.GetAllPeople();
+    //    peopleList.ItemsSource = people;
+    //}
+
+    private async void TapGestureForSignIn(object sender, EventArgs e)
+    {
+        await Shell.Current.GoToAsync("//SignInPage");
     }
 }

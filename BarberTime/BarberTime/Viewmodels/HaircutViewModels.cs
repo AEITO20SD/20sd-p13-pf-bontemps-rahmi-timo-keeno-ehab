@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace BarberTime.Viewmodels
 {
     public partial class HaircutViewModels : ObservableObject
@@ -16,6 +18,7 @@ namespace BarberTime.Viewmodels
         public HaircutViewModels()
         {
             LoadPopulairHaircuts();
+           
         }
 
         private void LoadPopulairHaircuts()
@@ -24,26 +27,26 @@ namespace BarberTime.Viewmodels
             {
                 new PopulairHaircut()
                 {
-                    Naam =  ("Classic Pompadour"),
-                    Afbeelding =new Uri("")
+                    Naam =  "Classic Pompadour",
+                    Afbeelding = "man_bun.png"
                 },
 
                 new PopulairHaircut()
                 {
-                    Naam =  ("Medium Curls "),
-                    Afbeelding =new Uri("")
+                    Naam =  "Medium Curls ",
+                    Afbeelding = "medium_curls.png"
                 },
 
                  new PopulairHaircut()
                 {
-                    Naam =  ("Assymetrical Bang"),
-                    Afbeelding =new Uri("")
+                    Naam =  "Assymetrical Bang",
+                    Afbeelding = "undercut_fade.png"
                 },
 
                 new PopulairHaircut()
                 {
-                    Naam =  ("Spickey Texture "),
-                    Afbeelding =new Uri("")
+                    Naam =  "Spickey Texture ",
+                    Afbeelding ="modern_mullet.png"
                 },
 
             };

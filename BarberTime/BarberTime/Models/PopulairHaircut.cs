@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SQLite;
 using MaxLengthAttribute = System.ComponentModel.DataAnnotations.MaxLengthAttribute;
 using System.ComponentModel.DataAnnotations;
 
@@ -24,7 +23,7 @@ namespace BarberTime.Models
         public int TypeId { get; set; }
 
         [Required]
-        public Uri Afbeelding { get; set; }
+        public ImageSource Afbeelding { get; set; }
 
     }
 }

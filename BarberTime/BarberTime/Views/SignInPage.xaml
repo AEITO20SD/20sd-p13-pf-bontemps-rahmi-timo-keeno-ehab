@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BarberTime.Views.SignInPage"
+             BackgroundColor="#F6F6F6">
+
+    <VerticalStackLayout VerticalOptions="Center">
+        <Grid Padding="40" RowSpacing="6" ColumnSpacing="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+                <RowDefinition Height="AUTO"/>
+            </Grid.RowDefinitions>
+
+            <Entry x:Name="email"
+                 Placeholder="Enter email" 
+                 Keyboard="Email"/>
+
+            <Entry x:Name="password"
+                 Placeholder="Enter password" 
+                 IsPassword="true"
+                 Grid.Row="1"/>
+
+            <Button Text="LOG IN"
+                Command="{Binding SignIn}"
+                Grid.Row="2"/>
+
+            <Label Text="Geen account? SIGN UP"
+                  TextColor="DimGrey"
+                  Grid.Row="3">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureForSign"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
