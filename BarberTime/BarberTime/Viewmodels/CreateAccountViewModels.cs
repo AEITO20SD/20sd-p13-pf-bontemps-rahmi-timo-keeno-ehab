@@ -32,7 +32,7 @@ namespace BarberTime
             _dbPath = dbPath;
         }
 
-        public void AddNewPerson(string name, string email, string password, string number)
+        public async Task AddNewPersonAsync(string name, string email, string password, string number)
         {
             int result = 0;
             try
@@ -57,10 +57,11 @@ namespace BarberTime
                 result = conn.Insert(new CreateAccount { Name = name, Email = email, Password = password, Phone_number = number });
 
                 StatusMessage = string.Format("{0} record(s) added (Name: {1})", result, name, email, password, number);
+                await Shell.Current.GoToAsync("//MainPage");
             }
             catch (Exception ex)
             {
-                StatusMessage = string.Format("Failed to add {0}. Error: {1}", name, email, password, number, ex.Message);
+                StatusMessage = string.Format("Failed to add");
             }
 
         }

@@ -1,7 +1,7 @@
-namespace BarberTime.Views;
 using BarberTime.Models;
 using System.Collections.Generic;
 
+namespace BarberTime.Views;
 public partial class CreateAccountPage : ContentPage
 {
 	public CreateAccountPage()
@@ -12,7 +12,7 @@ public partial class CreateAccountPage : ContentPage
     {
         statusMessage.Text = "";
 
-        App.AccountRepo.AddNewPerson(name.Text, email.Text, password.Text, number.Text);
+        App.AccountRepo.AddNewPersonAsync(name.Text, email.Text, password.Text, number.Text);
         statusMessage.Text = App.AccountRepo.StatusMessage;
     }
 

@@ -6,6 +6,16 @@
     xmlns:local="clr-namespace:BarberTime"
     xmlns:views="clr-namespace:BarberTime.Views">
 
+    <ShellContent 
+        Title="Sign up"
+        ContentTemplate="{DataTemplate views:CreateAccountPage}" 
+        Route="CreateAccountPage"/>
+    
+    <ShellContent 
+        Title="Sign in"
+        ContentTemplate="{DataTemplate views:SignInPage}" 
+        Route="SignInPage"/>
+
     <TabBar>
         <ShellContent
         Title="Home"
@@ -30,16 +40,6 @@
         Icon="product_icon.png"
         ContentTemplate="{DataTemplate views:Producten}" 
         Route="Products"/>
-
-        <ShellContent 
-        Title="Sign up"
-        ContentTemplate="{DataTemplate views:CreateAccountPage}" 
-        Route="CreateAccountPage"/>
-
-        <ShellContent 
-        Title="Sign in"
-        ContentTemplate="{DataTemplate views:SignInPage}" 
-        Route="SignInPage"/>
 
     </TabBar>
 </Shell>
