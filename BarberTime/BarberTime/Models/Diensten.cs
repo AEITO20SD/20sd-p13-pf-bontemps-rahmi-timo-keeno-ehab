@@ -9,7 +9,7 @@ using MaxLengthAttribute = SQLite.MaxLengthAttribute;
 
 namespace BarberTime.Models
 {
-    [Table("Dienzten")]
+    [Table("Diensten")]
     internal class Diensten
     {
         [PrimaryKey, AutoIncrement]
@@ -26,6 +26,6 @@ namespace BarberTime.Models
         public string Description { get; set; }
 
         [Required]
-        public string Prijs { get; set; }
+        public string Price { get; set; }
     }
 }
