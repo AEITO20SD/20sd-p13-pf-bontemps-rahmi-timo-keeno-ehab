@@ -7,6 +7,6 @@ public partial class Producten : ContentPage
 	{
         InitializeComponent();
 
-        webView.Source="http://151965.ao-alkmaar.nl/";
+        webView.Source="http://151965.ao-alkmaar.nl/barbertime";
     }
 }
