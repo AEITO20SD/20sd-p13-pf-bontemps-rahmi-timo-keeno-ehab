@@ -122,6 +122,7 @@ namespace BarberTime.Viewmodels.Agenda
         {
             Calendar?.NavigateCalendar(Amount);
         } 
+
         public void ChangeDateSelection(DateTime DateTime)
         {
             Calendar?.ChangeDateSelection(DateTime);
