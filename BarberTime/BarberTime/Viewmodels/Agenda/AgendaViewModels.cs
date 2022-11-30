@@ -53,7 +53,7 @@ namespace BarberTime.Viewmodels.Agenda
             LoadTimes();
 
             var dbPath = FileAccessHelper.GetLocalFilePath("BarberTime.db3");
-            // code to initialize the repository
+            // Code to initialize the repository.
             if (conn != null)
                 return;
 
@@ -126,7 +126,7 @@ namespace BarberTime.Viewmodels.Agenda
         {
             Calendar?.ChangeDateSelection(DateTime);
 
-            // Reset TimesViewModel naar startup waardes
+            // Reset TimesViewModel naar startup waardes.
             foreach(var timeViewModel in TimesViewModel)
             {
                 timeViewModel.IsChecked = false;
@@ -136,7 +136,7 @@ namespace BarberTime.Viewmodels.Agenda
             // Haal alle reservaties op vanaf database.
             List<Reservation> reservations = conn.Query<Reservation>("Select * From Reservation");
 
-            // voor 
+            // Voor. 
             foreach (var reservation in reservations.Where(m=>m.Date == DateTime.ToString()))
             {
                 TimesViewModel.FirstOrDefault(m => m.Time == reservation.Time).IsAvailable = false;
