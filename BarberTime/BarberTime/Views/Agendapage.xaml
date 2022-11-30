@@ -110,59 +110,85 @@
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
-            <RadioButton Grid.Column="0" Grid.Row="0" Content="8:00"
-                         IsEnabled="True"
+                
+                
+            <RadioButton Grid.Column="0" Grid.Row="0" Content="{Binding TimesViewModel[0].Time}"
+                         IsEnabled="{Binding TimesViewModel[0].IsAvailable}"
+                         IsChecked="{Binding TimesViewModel[0].IsChecked, Mode=TwoWay}"
                      GroupName="colors"
                       />
-                <RadioButton Grid.Column="0" Grid.Row="1" Content="9:00"
-                             IsEnabled="false"     
+                <RadioButton Grid.Column="0" Grid.Row="1" Content="{Binding TimesViewModel[1].Time}"
+                             IsEnabled="{Binding TimesViewModel[1].IsAvailable}"
+                                                      IsChecked="{Binding TimesViewModel[1].IsChecked, Mode=TwoWay}"
+
                      GroupName="colors"
                       />
-                <RadioButton Grid.Column="0" Grid.Row="2" Content="10:00"
-                             IsEnabled="false"
+                <RadioButton Grid.Column="0" Grid.Row="2" Content="{Binding TimesViewModel[2].Time}"
+                             IsEnabled="{Binding TimesViewModel[2].IsAvailable}"
+                                                      IsChecked="{Binding TimesViewModel[2].IsChecked, Mode=TwoWay}"
+
                      GroupName="colors"
                       />
-                <RadioButton Content="11:00" Grid.Column="1" Grid.Row="0"
-                             IsEnabled="True"
+                <RadioButton Content="{Binding TimesViewModel[3].Time}" Grid.Column="1" Grid.Row="0"
+                             IsEnabled="{Binding TimesViewModel[3].IsAvailable}"
+                                                      IsChecked="{Binding TimesViewModel[3].IsChecked, Mode=TwoWay}"
+
                      GroupName="colors"
                       />
-                <RadioButton Content="12:00" Grid.Column="1" Grid.Row="1"
-                             IsEnabled="True"
+                <RadioButton Content="{Binding TimesViewModel[4].Time}" Grid.Column="1" Grid.Row="1"
+                             IsEnabled="{Binding TimesViewModel[4].IsAvailable}"
+                                                      IsChecked="{Binding TimesViewModel[4].IsChecked, Mode=TwoWay}"
+
                      GroupName="colors"
                       />
-                <RadioButton Content="13:00" Grid.Column="1" Grid.Row="2"
-                             IsEnabled="false"
+                <RadioButton Content="{Binding TimesViewModel[5].Time}" Grid.Column="1" Grid.Row="2"
+                             IsEnabled="{Binding TimesViewModel[5].IsAvailable}"
+                                                      IsChecked="{Binding TimesViewModel[5].IsChecked, Mode=TwoWay}"
+
                      GroupName="colors"
                       />
-                <RadioButton Content="14:00" Grid.Column="2" Grid.Row="0"
-                             IsEnabled="True"
+                <RadioButton Content="{Binding TimesViewModel[6].Time}" Grid.Column="2" Grid.Row="0"
+                             IsEnabled="{Binding TimesViewModel[6].IsAvailable}"
+                                                      IsChecked="{Binding TimesViewModel[6].IsChecked, Mode=TwoWay}"
+
                      GroupName="colors"
                       />
-                <RadioButton Content="15:00" Grid.Column="2" Grid.Row="1"
-                             IsEnabled="false"
+                <RadioButton Content="{Binding TimesViewModel[7].Time}" Grid.Column="2" Grid.Row="1"
+                             IsEnabled="{Binding TimesViewModel[7].IsAvailable}"
+                                                      IsChecked="{Binding TimesViewModel[7].IsChecked, Mode=TwoWay}"
+
                      GroupName="colors"
                       />
-                <RadioButton Content="16:00" Grid.Column="2" Grid.Row="2"
-                             IsEnabled="True"
+                <RadioButton Content="{Binding TimesViewModel[8].Time}" Grid.Column="2" Grid.Row="2"
+                             IsEnabled="{Binding TimesViewModel[8].IsAvailable}"
+                                                      IsChecked="{Binding TimesViewModel[8].IsChecked, Mode=TwoWay}"
+
                      GroupName="colors"
                       />
-                <RadioButton Content="17:00" Grid.Column="3" Grid.Row="0"
-                             IsEnabled="True"
+                <RadioButton Content="{Binding TimesViewModel[9].Time}" Grid.Column="3" Grid.Row="0"
+                             IsEnabled="{Binding TimesViewModel[9].IsAvailable}"
+                                                      IsChecked="{Binding TimesViewModel[9].IsChecked, Mode=TwoWay}"
+
                      GroupName="colors"
                       />
-                <RadioButton Content="18:00" Grid.Column="3" Grid.Row="1"
-                             IsEnabled="True"
+                <RadioButton Content="{Binding TimesViewModel[10].Time}" Grid.Column="3" Grid.Row="1"
+                             IsEnabled="{Binding TimesViewModel[10].IsAvailable}"
+                                                      IsChecked="{Binding TimesViewModel[10].IsChecked, Mode=TwoWay}"
+
                      GroupName="colors"
                       />
-                <RadioButton Content="19:00" Grid.Column="3" Grid.Row="2"
-                             IsEnabled="True"
+                <RadioButton Content="{Binding TimesViewModel[11].Time}"  Grid.Column="3" Grid.Row="2"
+                             IsEnabled="{Binding TimesViewModel[11].IsAvailable}"
+                                                      IsChecked="{Binding TimesViewModel[11].IsChecked, Mode=TwoWay}"
+
                      GroupName="colors"
                       />
          
         </Grid>
 
         <Button Grid.Row="2" Grid.Column="0"
-            Text="Volgende"
+            Text="Plaats Reservatie"
+                Command="{Binding SaveReservationCommand}"
             VerticalOptions="CenterAndExpand"
             HorizontalOptions="Center"
             BackgroundColor="#3A4774"/>

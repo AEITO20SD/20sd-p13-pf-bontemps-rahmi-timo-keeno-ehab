@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Maui;
+﻿using BarberTime.Viewmodels.Agenda;
+using CommunityToolkit.Maui;
 
 namespace BarberTime;
 
