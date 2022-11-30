@@ -4,6 +4,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,21 +20,24 @@ namespace BarberTime.Viewmodels
         public HaircutViewModels()
         {
             LoadPopulairHaircuts();
-           
+
         }
 
         public Command<PopulairHaircut> itemCommand { get; }
 
         [RelayCommand]
-        async Task Tap (string s)
+        async Task Tap(string s)
         {
             await Shell.Current.GoToAsync(nameof(HaircutDetailPage));
         }
 
-     
-        private void LoadPopulairHaircuts()
+
+    private void LoadPopulairHaircuts()
         {
-            Populairhaircuts = new()
+            ObservableCollection<PopulairHaircut> PopulairHaircutss;
+
+
+            PopulairHaircutss = new()
             {
                 new PopulairHaircut()
                 {
@@ -60,7 +64,11 @@ namespace BarberTime.Viewmodels
                 },
 
             };
+
         }
 
     }
+
 }
+
+

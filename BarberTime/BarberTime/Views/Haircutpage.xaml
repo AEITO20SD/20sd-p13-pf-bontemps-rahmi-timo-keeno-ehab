@@ -54,11 +54,14 @@
                     </Grid.ColumnDefinitions>
 
 
-                    <CollectionView ItemsSource="{Binding Populairhaircuts}"
-                            Grid.Column="1" Grid.Row="1"
-                            ItemsLayout="VerticalGrid, 2"
-                                     SelectedItem="{Binding itemCommand}">
+                <CollectionView 
+                                 ItemsSource="{Binding Populairhaircuts}"
+                                 Grid.Column="1" Grid.Row="1"
+                                 ItemsLayout="VerticalGrid, 2"
+                                      SelectionMode="Single"
+               SelectionChanged="hairCutCollection_SelectionChanged">
 
+                        
                         <CollectionView.ItemTemplate>
                             <DataTemplate x:DataType="models:PopulairHaircut">
                                 <VerticalStackLayout Grid.Row="0">
