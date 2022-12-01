@@ -6,8 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//vergeet geen comments te plaatsen tussen je code voor het uitlegen van de stappen die je uitvoert
-
 namespace BarberTime.Services
 {
     public class DienstService
