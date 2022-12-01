@@ -10,6 +10,7 @@ namespace BarberTime.Services
 {
     public class DienstService
     {
+        // SQLite connection
 
         private readonly SQLiteConnection _dbConnection;
         public DienstService()
@@ -20,6 +21,7 @@ namespace BarberTime.Services
             _dbConnection.CreateTable<DienstenModel>();
 
         }
+        // CRUD methods.
 
         public List<DienstenModel> GetAllDiensten()
         {

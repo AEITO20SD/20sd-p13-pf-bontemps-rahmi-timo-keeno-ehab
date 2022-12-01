@@ -24,6 +24,7 @@ namespace BarberTime.Viewmodels
         #region Methods
         public void ShowDiensten()
         {
+            // Toon alle diensten.
             var allDiensten = _dienstService.GetAllDiensten();
 
             if (allDiensten?.Count > 0)
@@ -43,7 +44,7 @@ namespace BarberTime.Viewmodels
             await App.Current.MainPage.Navigation.PushAsync(new AddDienstPage());
         });
 
-
+        // Tapgesture om een pop up met update en verwijder te laten tonen.
         public ICommand SelectedDienstCommand => new Command<DienstenModel>(async (dienst) =>
         {
             string res = await App.Current.MainPage.DisplayActionSheet("Operation", "Cancel", null, "Update", "Delete");
