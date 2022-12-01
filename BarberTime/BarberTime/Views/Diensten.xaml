@@ -2,11 +2,75 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BarberTime.Views.Diensten"
-             Title="Diensten">
+             xmlns:viewmodels="clr-namespace:BarberTime.Viewmodels"
+             x:DataType="viewmodels:DienstenViewModel"
+             xmlns:models="clr-namespace:BarberTime.Models" BackgroundColor="#F6F6F6" Padding="5">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+
+        <Label Text="Kies Dienst" 
+               Padding="4" 
+               FontSize="24"
+               HorizontalTextAlignment="Center" 
+               Grid.Row="0"
+               TextColor="{StaticResource BarberTimeBlue}"/>
+
+        <Button Text="Voeg nieuwe dienst toe" 
+                HorizontalOptions="Center" 
+                Command="{Binding NavigateToAddDienstPageCommand}"
+                BackgroundColor="{StaticResource BarberTimeBlue}"
+                Padding="16"
+                FontSize="14"
+                CornerRadius="7"/>
+
+        <ScrollView MaximumHeightRequest="620">
+            <CollectionView  ItemsSource="{Binding Dienst}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:DienstenModel">
+                        <Border MaximumHeightRequest="160"
+                                HeightRequest="170"
+                            BackgroundColor="#D9D9D9">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="155"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid Padding="15">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="35"/>
+                                        <RowDefinition Height="30"/>
+                                        <RowDefinition Height="AUTO"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="{Binding Name}" 
+                                        Grid.Row="0"
+                                        FontSize="25"
+                                        FontAttributes="Bold"/>
+
+                                    <Label Text="{Binding Length}" 
+                                        Grid.Row="1"/>
+
+                                    <Label Text="{Binding Description}" 
+                                        Grid.Row="2"
+                                        FontSize="16"/>
+
+                                    <Grid.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Source={x:RelativeSource AncestorType={x:Type viewmodels:DienstenViewModel}},Path=SelectedDienstCommand}"  CommandParameter="{Binding .}" />
+                                    </Grid.GestureRecognizers>
+                                </Grid>
+
+                                <Label  Text="{Binding Price}" 
+                                    Grid.Column="1"
+                                    Padding="20"
+                                    VerticalTextAlignment="End"
+                                    HorizontalTextAlignment="Center" 
+                                    FontSize="27"
+                                    FontAttributes="Bold"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
     </VerticalStackLayout>
 </ContentPage>
