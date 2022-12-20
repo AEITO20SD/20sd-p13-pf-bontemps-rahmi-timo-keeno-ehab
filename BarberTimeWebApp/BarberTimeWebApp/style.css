@@ -1,0 +1,194 @@
+header{
+  width: 100%;
+  top: 0;
+  position: fixed;
+}
+
+body {
+  margin: 60px 0px 0px 0px;
+  width: auto;
+  font-family: sans-serif;
+  color: #494949;
+}
+
+a{
+  text-decoration: none;
+  color: #F5F5F5;
+}
+
+.logo{
+  height: 60px;
+  align-self: center;
+}
+
+.flex1{
+  flex: 1;
+}
+
+.flexheader {
+    display: flex;
+    height: 60px;
+    background-color: #F5F5F5;
+    box-shadow: 0px 3px 6px rgb(0 0 0 / 16%);
+    text-align: center;
+}
+
+.backbutton{
+  height: 30px;
+  padding: 15px;
+}
+
+.cartbutton{
+  height: 30px;
+  padding: 15px 0px 15px 15px;
+}
+
+.cart{
+  display: inline-flex;
+  font-size: 18px;
+  padding-right: 15px;
+}
+
+.productBox{
+  width: 160px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.productImage{
+  max-width: 160px;
+  max-height: 160px;
+}
+
+.imageBox{
+  width: 160px;
+  height: 160px;
+  background-color: #F5F5F5;
+  text-align: center;
+}
+
+.allProductsBox{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.lowerProductBox{
+  width: 160px;
+  min-height: 80px;
+  background-color: #3C4874;
+  color: #F5F5F5;
+  font-size: 14px;
+  position: relative;
+}
+
+.textProductBox{
+  margin: 0px;
+  padding: 5px
+}
+
+.addItemToCartButton{
+  width: 45px;
+}
+
+.priceAndCart{
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 8px;
+  margin-bottom: 5px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.columnImage{
+  max-height: 40px;
+  max-width: 40px;
+}
+
+.button {
+  background-color: #3C4874;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 7px;
+}
+
+.addButton{
+  flex: 1;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.formText{
+  padding: 7px;
+}
+
+input{
+  border: none;
+  border-bottom: 1px solid #3C4874;
+}
+
+label{
+  font-weight: bold;
+}
+
+.editText{
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.fullProductInfoBox{
+  background-color: #F5F5F5;
+  margin-top: 80px;
+  display: flex;
+  width: 100%;
+}
+
+.descriptionBox{
+  width: 98%;
+  border: 1px solid #3C4874;
+  margin-top: 5px;
+}
+
+.productImageDetails{
+  max-width: 160px;
+  max-height: 160px;
+  flex: 1;
+  text-align: center;
+}
+
+.ProductDetails{
+  flex: 1;
+}
+
+.ProductExtendedDetails{
+  width: 100%;
+  background-color: #3C4874;
+  color: white;
+  padding: 10px;
+  min-height: 200px;
+}
