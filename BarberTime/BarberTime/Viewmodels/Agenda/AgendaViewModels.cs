@@ -35,6 +35,8 @@ namespace BarberTime.Viewmodels.Agenda
         private string _notifyUserNoHoursLeft;
     
         #region Commands
+
+        //het aanmaken van nieuwe ICommands
         public ICommand NavigateCalendarCommand { get; set; }
         public ICommand ChangeDateSelectionCommand { get; set; }
         public ICommand SaveReservationCommand { get; set; }
@@ -63,6 +65,7 @@ namespace BarberTime.Viewmodels.Agenda
         #endregion
 
         #region Methods
+        //Haal de tijden op vanaf de database en maak er nieuwe tijden van
         private void LoadTimes()
         {
             TimesViewModel.Add(new AgendaTimeViewModel()
@@ -137,7 +140,7 @@ namespace BarberTime.Viewmodels.Agenda
             // Haal alle reservaties op vanaf database.
             List<Reservation> reservations = conn.Query<Reservation>("Select * From Reservation");
 
-            // Voor. 
+            // Voor als een tijd geboekt is, maak hem dan klikbaar
             foreach (var reservation in reservations.Where(m=>m.Date == DateTime.ToString()))
             {
                 TimesViewModel.FirstOrDefault(m => m.Time == reservation.Time).IsAvailable = false;
@@ -155,6 +158,8 @@ namespace BarberTime.Viewmodels.Agenda
             }
         }
 
+        //Checken of de buttons wel of niet zijn aangeklikt
+        //Het opslaan van de gekozen tijd en datum
         public void SaveReservation()
         {
             var selectedTime = TimesViewModel.FirstOrDefault(m => m.IsChecked);

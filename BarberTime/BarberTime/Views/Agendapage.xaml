@@ -110,8 +110,9 @@
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
-                
-                
+
+
+                <!--het aanmaken van buttons om een tijd te boeken-->
             <RadioButton Grid.Column="0" Grid.Row="0" Content="{Binding TimesViewModel[0].Time}"
                          IsEnabled="{Binding TimesViewModel[0].IsAvailable}"
                          IsChecked="{Binding TimesViewModel[0].IsChecked, Mode=TwoWay}"
@@ -186,7 +187,8 @@
          
         </Grid>
 
-        <Button Grid.Row="2" Grid.Column="0"
+            <!--het aanmaken van buttons om er mee te reserveren-->
+            <Button Grid.Row="2" Grid.Column="0"
             Text="Plaats Reservatie"
                 Command="{Binding SaveReservationCommand}"
             VerticalOptions="CenterAndExpand"
