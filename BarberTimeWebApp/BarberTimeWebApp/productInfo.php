@@ -6,15 +6,16 @@
   </head>
   <body>
     <?php include "header.php";
+    //Id wordt opgehaald van waar de gebruiker op klikt
         $productId = $_GET['Id'];
 
          include "database/connectdb.php";
-
+         //Data wordt opgehaald van het specefieke product
          $sql = "SELECT * FROM `products` WHERE `Id` LIKE $productId";
          $result = $conn->query($sql);
 
          if ($result->num_rows > 0) {
-           // output data of each row
+           // Data wordt getoond
            while($row = $result->fetch_assoc()) {
              ?>
              <div class="fullProductInfoBox">
@@ -33,8 +34,10 @@
                </div>
              </div>
              <div class="ProductExtendedDetails">
-               <h3>Beschrijving</h3>
+               <h3 style="padding: 10px">Beschrijving</h3>
+                 <div style="padding: 10px">
                <?php echo $row["Description"]; ?>
+                 </div>
              </div>
              <title><?php echo $row['Name'] ?> - BarberTime</title>
             <?php

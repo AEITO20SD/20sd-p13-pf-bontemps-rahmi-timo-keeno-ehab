@@ -189,6 +189,36 @@ label{
   width: 100%;
   background-color: #3C4874;
   color: white;
-  padding: 10px;
   min-height: 200px;
+}
+
+.changeAccountSettings{
+  display: flex;
+  padding: 8px;
+}
+
+/* Account pages */
+.FormContainer {
+  width: 650px;
+  max-width: 100%;
+  margin: 50px auto 25px auto;
+}
+
+.form-labels{
+  width: 100%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.errorcodes {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  color: red;
+  font-style: oblique;
 }

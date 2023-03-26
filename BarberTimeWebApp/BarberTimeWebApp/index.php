@@ -8,11 +8,11 @@
   </head>
   <?php include "header.php"; ?>
   <body>
+
     <div class="allProductsBox">
       <?php
       include "productspage.php";
       ?>
     </div>
-    <a href="dataview.php" style="color: black;"><img style="width: 10px;" src="images/white.png" alt=""></a>
   </body>
 </html>

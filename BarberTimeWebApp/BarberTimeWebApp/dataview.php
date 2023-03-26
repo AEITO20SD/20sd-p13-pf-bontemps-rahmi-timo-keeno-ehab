@@ -1,3 +1,9 @@
+<?php
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === false){
+header("location: index.php");
+exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="nl" dir="ltr">
   <head>
@@ -7,8 +13,13 @@
   </head>
   <body>
     <?php include "header.php"; ?>
+    <div class="changeAccountSettings">
+        <b style="flex: 1; text-align: center;">Account</b>
+        <a style="flex: 2; color: dodgerblue; text-align: center;" href="resetPassword.php">Verander Wachtwoord</a>
+        <a style="flex: 1; color: #cc0000; text-align: center;" href="logout.php">Uitloggen</a>
+    </div>
     <div class="allProductsBox">
-      <a class="addButton" href="editProduct.php"><button class="button" type="button" name="button">Product Toevoegen</button></a>
+      <a class="addButton" href="addProduct.php"><button class="button" type="button" name="button">Product Toevoegen</button></a>
     </div>
     <table>
       <tr>
@@ -37,7 +48,7 @@
           } else { ?>
             <td style="padding: 1px; text-align: center;"><img class="columnImage" src="data:image/jpg;charset=utf8;base64,<?php echo ($row['Image']); ?>" alt=""></td>
           <?php }?>
-          <td>Edit</td>
+          <td><a style="color: dodgerblue" href="editProduct.php?id=<?php echo $row["Id"]; ?>">Edit</a></td>
         </tr>
         <?php
       }

@@ -13,10 +13,11 @@
       </a>
     </div>
     <div class="flex1" style="text-align: right;">
-      <a href="shoppingcart.php">
-      <div class="cart">
-          <img src="images/shoppingcart.png" class="cartbutton" alt="Winkelwagen">
-          <p style="color: black;">(<?php echo $ProductsInCart; ?>)</p>
+        <a href="signIn.php" style="color: black;"><img style="width: 50px; padding: 5px;" src="images/usericon.png" alt=""></a>
+<!--      <a href="shoppingcart.php">-->
+<!--      <div class="cart">-->
+<!--          <img src="images/shoppingcart.png" class="cartbutton" alt="Winkelwagen">-->
+<!--          <p style="color: black;">(--><?php //echo $ProductsInCart; ?><!--)</p>-->
       </div>
       </a>
     </div>
