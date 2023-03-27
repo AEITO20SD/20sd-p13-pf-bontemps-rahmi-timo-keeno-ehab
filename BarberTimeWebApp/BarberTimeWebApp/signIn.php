@@ -82,9 +82,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <label for="username"><b>Gebruikersnaam:</b></label><br>
             <input type="text" name="username" required class="form-labels" value="<?php echo $username; ?>"><br><br>
-            <span class="errorcodes"><?php echo $username_err; ?></span>
+            <span class="errorcodes"><?php echo $username_err; ?></span><br>
             <b><label for="password">Wachtwoord:</label></b><br>
-            <input type="password" name="password" required class="form-labels">
+            <input type="password" name="password" required class="form-labels"><br>
             <span class="errorcodes"><?php echo $password_err; ?></span><br>
             <button class="button addButton" type="submit" value="Inloggen">Inloggen</button><br><br>
             <label for="klik hier">Heeft u nog geen account? <a style="color: dodgerblue" href="createAccount.php">Registreer</a></label><br>
