@@ -1,3 +1,48 @@
+<?php
+session_start();
+
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: signIn.php");
+    exit;
+}
+// Database connection is imported
+ include "database/connectdb.php";
+// Collects all the data in the inputs and sends it to a database
+ if (isset($_POST['submit'])) {
+     $image = ($_FILES['file']['tmp_name']);
+
+    if (mb_strlen($image) > 10) {
+        $Image = base64_encode(file_get_contents($image));
+        $ImgBool = true;
+    } else {
+        $ImgBool = false;
+    }
+
+    $Name = ($_POST['ProductName']);
+    $Euro = ($_POST['Euros']);
+    $Cents = ($_POST['Cents']);
+    $InvAmount = ($_POST['InvAmount']);
+
+    //$Image = ($_POST['file']);
+    $Description = ($_POST['Description']);
+
+    if ($ImgBool === false){
+        $sql = "INSERT INTO products (Name, Euro, Cents, Description, InvAmount)
+        VALUES ('$Name','$Euro', '$Cents', '$Description', '$InvAmount')";
+    } else {
+        $sql = "INSERT INTO products (Name, Euro, Cents, Description, InvAmount, Image)
+        VALUES ('$Name','$Euro', '$Cents', '$Description', '$InvAmount', '$Image')";
+    }
+
+
+
+    if ($conn->query($sql) === TRUE) {
+        header('Location: dataview.php'); exit;
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+} ?>
 <!DOCTYPE html>
 <html lang="nl" dir="ltr">
 <head>
@@ -5,8 +50,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Bewerken - BarberTime</title>
 </head>
-<!-- Database connection is imported  -->
-<?php include "database/connectdb.php"; ?>
+
 <body>
 <?php include "header.php"; ?>
 <form class="formText"  method="post" enctype="multipart/form-data">
@@ -39,30 +83,7 @@
 </form>
 </body>
 </html>
-<!-- Collects all the data in the inputs and sends it to a database -->
-<?php if (isset($_POST['submit'])) {
-    $image = ($_FILES['file']['tmp_name']);
 
-    $Name = ($_POST['ProductName']);
-    $Euro = ($_POST['Euros']);
-    $Cents = ($_POST['Cents']);
-    $InvAmount = ($_POST['InvAmount']);
-    $Image = base64_encode(file_get_contents($image));
-    //$Image = ($_POST['file']);
-    $Description = ($_POST['Description']);
-
-
-        $sql = "INSERT INTO products (Name, Euro, Cents, Description, InvAmount, Image)
-        VALUES ('$Name','$Euro', '$Cents', '$Description', '$InvAmount', '$Image')";
-
-
-    if ($conn->query($sql) === TRUE) {
-        header('Location: dataview.php'); exit;
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-} ?>
 <script>
     var uploadField = document.getElementById("file");
 
