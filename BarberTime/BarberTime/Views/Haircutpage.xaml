@@ -41,10 +41,10 @@
                     Margin="5"
                 />
 
-            <!-- Populaire kapsels -->
+            <!-- Populaire kapsels. -->
             <Label Text="Populaire kapsels" FontSize="16" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center"/>
         </Grid>
-        <!-- Aangemaakte kapsels -->
+        <!-- Aangemaakte kapsels. -->
     <ScrollView>
         <Grid Margin="10" RowSpacing="1">
 
